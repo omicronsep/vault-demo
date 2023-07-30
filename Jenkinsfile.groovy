@@ -13,9 +13,9 @@ node {
         // (e.g. folder or global) will be used
         def configuration = [vaultUrl         : 'http://vaultdgtic.sep.gob.mx',
                              vaultCredentialId: 'vault-jenkins-role',
-                             engineVersion    : 1]
+                             engineVersion    : 2]
         // inside this block your credentials will be available as env variables
-        withVault([configuration: configuration,vaultSecrets: secrets]) {
+        withVault([configuration: configuration, vaultSecrets: secrets]) {
             sh 'echo $testing'
             sh 'echo $testing_again'
             sh 'echo $another_test'
