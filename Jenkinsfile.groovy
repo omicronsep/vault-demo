@@ -19,7 +19,7 @@ node {
                      ]
                     ]
             ]
-            withVault([vaultSecrets: secrets]) {
+            withVault([configuration:configuration,vaultSecrets: secrets]) {
                 sh 'echo $testing'
                 sh 'echo $testing_again'
                 sh 'echo $another_test'
