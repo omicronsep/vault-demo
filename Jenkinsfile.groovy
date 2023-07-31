@@ -6,13 +6,13 @@ node {
             // (e.g. folder or global) will be used
             def configuration = [vaultUrl         : 'http://vaultdgtic.sep.gob.mx',
                                  vaultCredentialId: 'vault-jenkins-role',
-                                 engineVersion    : 2]
+                                 engineVersion    : 1]
             // inside this block your credentials will be available as env variables
             // define the secrets and the env variables
             // engine version can be defined on secret, job, folder or global.
             // the default is engine version 2 unless otherwise specified globally.
             def secrets = [
-                    [path        : 'creds/my-secret-text', engineVersion: 1,
+                    [path        : 'secret/creds/my-secret-text', engineVersion: 1,
                      secretValues: [
                              [envVar: 'testing', vaultKey: 'secret'],
                              [envVar: 'testing_again', vaultKey: 'clientid']
