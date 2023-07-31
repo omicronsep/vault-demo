@@ -15,7 +15,7 @@ node {
                     [path        : 'secrets/creds/my-secret-text', engineVersion: 1,
                      secretValues: [
                              [envVar: 'testing', vaultKey: 'secret_id'],
-                             [envVar: 'testing_again', vaultKey: 'clientid_id']
+                             [envVar: 'testing_again', vaultKey: 'role_id']
                      ]
                     ]
             ]
@@ -26,7 +26,7 @@ node {
             }
         }
         catch (e) {
-            sh('echo $e')
+            sh('echo ',e)
         }
 
     }
