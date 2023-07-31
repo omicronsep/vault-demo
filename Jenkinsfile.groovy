@@ -5,7 +5,7 @@ node {
             // optional configuration, if you do not provide this the next higher configuration
             // (e.g. folder or global) will be used
             def configuration = [vaultUrl         : 'http://vaultdgtic.sep.gob.mx',
-                                 vaultCredentialId: 'my-secret-text',
+                                 vaultCredentialId: 'ault-master-token',
                                  engineVersion    : 2]
             // inside this block your credentials will be available as env variables
             // define the secrets and the env variables
