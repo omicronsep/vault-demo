@@ -26,7 +26,7 @@ node {
             }
         }
         catch (e) {
-            e.printStackTrace()
+            sh('echo $e')
         }
 
     }
