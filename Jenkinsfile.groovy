@@ -4,7 +4,7 @@ node {
         // engine version can be defined on secret, job, folder or global.
         // the default is engine version 2 unless otherwise specified globally.
         def secrets = [
-                [path        : 'secrets/creds/jenkins-role', engineVersion: 2,
+                [path        : 'secrets/creds/my-secret-text', engineVersion: 2,
                  secretValues: [
                          [envVar: 'testing', vaultKey: 'secret'],
                          [envVar: 'testing_again', vaultKey: 'clientid']
