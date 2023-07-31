@@ -12,10 +12,12 @@ node {
             // engine version can be defined on secret, job, folder or global.
             // the default is engine version 2 unless otherwise specified globally.
             def secrets = [
-                    [path        : 'creds/my-secret-text', engineVersion: 1,
+                    [path        : 'dgtic-secrets/sc', engineVersion: 1,
                      secretValues: [
-                             [envVar: 'testing', vaultKey: 'secret_id'],
-                             [envVar: 'testing_again', vaultKey: 'role_id']
+                             [envVar: 'testing', vaultKey: 'clientId'],
+                             [envVar: 'testing_again', vaultKey: 'clientSecret'],
+                             [envVar: 'testing', vaultKey: 'realm'],
+                             [envVar: 'testing_again', vaultKey: 'redisPwd']
                      ]
                     ]
             ]
