@@ -26,7 +26,7 @@ node {
             }
         }
         catch (e) {
-            sh('echo ',e)
+            sh('echo e')
         }
 
     }
