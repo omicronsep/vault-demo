@@ -12,8 +12,9 @@ node {
             // engine version can be defined on secret, job, folder or global.
             // the default is engine version 2 unless otherwise specified globally.
             def env = "test"
+            def unidad = "sc"
             def secrets = [
-                    [path        : 'dgtic-secrets/' + "$env" + '-env/sc', engineVersion: 1,
+                    [path        : 'dgtic-secrets/' + "$env" + '-env/' + "$unidad", engineVersion: 1,
                      secretValues: [
                              [envVar: 'testing', vaultKey: 'clientId'],
                              [envVar: 'testing_again', vaultKey: 'clientSecret'],
